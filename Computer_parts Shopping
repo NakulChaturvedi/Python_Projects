@@ -1,0 +1,35 @@
+available_parts= ["computer",
+                  "monitor",
+                  "keyboard",
+                  "mouse",
+                  "hdmi cable"]
+valid_choices =[]
+for i in range(1,len(available_parts)+ 1):
+    valid_choices.append(str(i))
+current_choice = "-"
+computer_parts =[]
+
+while current_choice !='0':
+    if current_choice in "1234":
+        print("Adding {}".format(current_choice))
+        if current_choice =='1':
+            computer_parts.append("computer")
+        elif current_choice =='2':
+            computer_parts.append("monitor")
+        elif current_choice =='3':
+            computer_parts.append("mouse")
+        elif current_choice =='4':
+            computer_parts.append("hdmi")
+
+
+
+    else:
+        print("Please add option from list below:")
+        print("When done, get your cart on the screen by typing '0'")
+        for number, part in enumerate(available_parts):
+            print("{0}: {1}.".format(number+1, part))
+        print("When done, get your cart on the screen by typing '0'")
+
+    current_choice =input()
+
+print(computer_parts)
